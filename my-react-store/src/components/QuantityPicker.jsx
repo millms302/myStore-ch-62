@@ -1,12 +1,14 @@
 import { useState } from "react";
 
-function QuantityPicker(props){
+function QuantityPicker(props) {
 
     const [quantity, setQuantity] = useState(1);
 
     function increaseQuantity(){
         let newQuantity = quantity + 1;
         setQuantity(newQuantity);
+        console.log("Increase Clicked");
+        props.onChange(newQuantity) // Notify the Parent about the Age.
     }
 
     function decreaseQuantity(){
@@ -14,6 +16,8 @@ function QuantityPicker(props){
         if(newQuantity > 0)
         {
         setQuantity(newQuantity);
+        console.log("Decrease Clicked");
+        props.onChange(newQuantity) // Notify the parent about the change.
         }
     }
     //quantity = 1; //This is an incorrect statement.
