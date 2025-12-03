@@ -50,7 +50,7 @@ function Catalog() {
                 <button onClick={clearFilter} className='btn btn-dark btn-filter'> All </button>
             </div>
             {categories.map(cat => <button key={cat} onClick={() => filter(cat)}
-                className='btn btn-primart btn-filter'>{cat}</button>
+                className='btn btn-primary btn-filter'>{cat}</button>
             )}
 
             <div className="product-list">
