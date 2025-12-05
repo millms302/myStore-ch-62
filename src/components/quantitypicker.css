@@ -1,5 +1,5 @@
 .btn-plus{
-    background-color: black;
+    background-color: blue;
     color: white;
     height: 40px;
     width: 40px;
@@ -7,9 +7,10 @@
 }
 
 .btn-minus{
-    background-color: black;
+    background-color: blue;
     color: white;
     height: 40px;
     width: 40px;
     font-size: 25pt;
+    
 }

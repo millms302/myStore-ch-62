@@ -11,6 +11,7 @@ import Catalog from './pages/Catalog.jsx';
 import Admin from './pages/Admin.jsx'
 import NotFound from './pages/NotFound.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Cart from './pages/Cart.jsx';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
           <Route path='/catalog' element={<Catalog/>}  />
           <Route path='/admin' element={<Admin/>} />
           <Route path='*' element={<NotFound/>} />
+          <Route path='/cart' element={<Cart/>} />
           
         </Routes>
       </main>

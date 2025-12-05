@@ -23,7 +23,7 @@ function Catalog() {
         setProducts(data)
         setProdsToDisplay(data) // initially display all products.
 
-        let cats = ["Beer","Fruit", "Vegetable", "Dairy", "Dessert"]
+        let cats = ["Gibson","Fender", "Reverend", "PRS", ]
         setCategories(cats)
     }
 
@@ -46,12 +46,13 @@ function Catalog() {
         <div className="catalog"> 
             <h1>Check Out Our Amazing Products</h1>
 
-            <div className="filters">
+            <div className="filters d-flex gap-2 mb-4">
                 <button onClick={clearFilter} className='btn btn-dark btn-filter'> All </button>
+                {categories.map(cat => <button key={cat} onClick={() => filter(cat)}
+                    className='btn btn-primary btn-filter'>{cat}</button>
+                )}
             </div>
-            {categories.map(cat => <button key={cat} onClick={() => filter(cat)}
-                className='btn btn-primary btn-filter'>{cat}</button>
-            )}
+            
 
             <div className="product-list">
                 {prodsToDisplay.map(prod => <Product key={prod._id} data={prod} />)}
